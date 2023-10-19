@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+main {
+  height: 100vh;
+  width: auto;
+}
+
+/* Navebar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 8rem;
+  background: black;
+  border-bottom: 1px solid rgb(216, 214, 214);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-left img {
+  width: 15rem;
+}
+
+.nav-left span {
+  color: white;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.nav-left a {
+  color: white;
+  font-size: 2.3rem;
+}
+
+.nav-left a::after {
+  content: "";
+  width: 0;
+  height: 0.2rem;
+  display: block;
+  transition: all 0.2s ease-in;
+}
+
+.nav-left a:hover::after {
+  width: 100%;
+  background: white;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 5rem;
+}
+
+#btn-two {
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden {
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: black;
+}
+
+.hidden a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.hidden .submit,
+.sing-in {
+  width: 50rem;
+  border-bottom: 1px solid rgb(211, 209, 209);
+  text-align: center;
+  padding: 2.6rem;
+}
+
+.hidden .submit:hover,
+.sing-in:hover {
+  color: rgb(195, 196, 197);
+}
+
+/* Section-1 */
+
+.section-1 {
+  height: 80vh;
+  width: auto;
+}
+
+.sec-1-container {
+  height: 60vh;
+  background: rgb(211, 226, 250);
+  font-size: 7rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sec-1-container .search {
+  width: 60rem;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+.sec-1-container span {
+  position: absolute;
+  font-size: 40px;
+  margin-left: -65px;
+  margin-top: 3.8rem;
+  cursor: pointer;
+}
+
+.sec-1-container span:hover {
+  color: rgb(108, 108, 248);
+}
+
+.section-1 .btn {
+  position: fixed;
+  font-size: 1.5rem;
+  background: rgb(86, 86, 247);
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  margin: 2rem;
+  color: white;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* section-2 */
+.section-2 {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.sec-2-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.sec-2-container .box {
+  display: flex;
+  gap: 2rem;
+  width: 35rem;
+  margin-top: 5rem;
+}
+
+.sec-2-container .box img {
+  width: 6rem;
+  height: 7rem;
+}
+
+.box .content a::after {
+  content: "";
+  width: 0;
+  height: 0.2rem;
+  display: block;
+  transition: all 0.2s ease-in;
+}
+
+.box .content a:hover::after {
+  width: 45%;
+  background: rgba(48, 37, 203, 0.6);
+}
+
+/* footer */
+footer {
+  position: relative;
+  color: white;
+  background-color: black;
+  padding: 3rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin-top: 8rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.footer-box a {
+  color: white;
+}
+
+.footer-box a::after {
+  content: "";
+  width: 0;
+  height: 0.2rem;
+  display: block;
+  transition: all 0.2s ease-in;
+}
+
+.footer-box a:hover::after {
+  width: 80%;
+  background: rgb(253, 253, 253);
+}
+
+.contact {
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+
+.copyright {
+  margin-top: 18rem;
+}
+
+.copyright img {
+  width: 3rem;
+}
+
+.copyright span {
+  margin-right: 0.5rem;
+}
+
+/* respensive css */
+@media all and (width < 750px) {
+  nav {
+    padding: 2rem 5rem;
+  }
+  .sec-1-container {
+    font-size: 4rem;
+  }
+
+  .sec-1-container .search {
+    width: 40rem;
+  }
+  .copyright {
+    margin-top: 5rem;
+  }
+
+  .sec-1-container span {
+    margin-top: 2.4rem;
+  }
+
+  .hidden .submit,
+  .sing-in {
+    width: 40rem;
+  }
+}
+
+@media all and (width < 550px) {
+  nav {
+    padding: 2rem 3rem;
+  }
+
+  .nav-left img {
+    width: 8rem;
+  }
+
+  .nav-left span {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .nav-left a {
+    color: white;
+    font-size: 1.3rem;
+  }
+
+  .hidden .submit,
+  .sing-in {
+    width: 25rem;
+  }
+
+  .sec-1-container {
+    font-size: 3rem;
+  }
+
+  .sec-1-container .search {
+    width: 28rem;
+  }
+
+  .section-2 {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+  }
+
+  .sec-2-container .box {
+    width: 28rem;
+  }
+
+  .sec-2-container .box img {
+    width: 3rem;
+    height: 4rem;
+  }
+}
